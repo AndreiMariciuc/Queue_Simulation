@@ -1,0 +1,54 @@
+@startuml
+'https://plantuml.com/class-diagram
+title Diagram UML - Queue Simulation
+
+class SimulationFrame {
+}
+
+class SimulationDrawFrame {
+}
+
+class SimulationManager {
+}
+
+class WriteInFile {
+}
+
+class Scheduler {
+}
+
+class Task {
+}
+
+class Server {
+}
+
+interface Strategy {
+}
+
+class ConcreteStrategyQueue {
+}
+
+class ConcreteStrategyTime {
+}
+
+enum SelectionPolicy {
+SHORTEST_QUEUE
+SHORTEST_TIME
+}
+
+SimulationFrame   *-- SimulationDrawFrame
+SimulationFrame   *-- SimulationManager
+SimulationManager *-- Scheduler
+SimulationManager o-- SelectionPolicy
+SimulationManager *-- Task
+SimulationManager ..> WriteInFile:<<create>>
+Scheduler         *-- Strategy
+Scheduler         *-- Server
+Strategy          <|-- ConcreteStrategyTime
+Strategy          <|-- ConcreteStrategyQueue
+
+Server            o--  Task
+
+
+@enduml

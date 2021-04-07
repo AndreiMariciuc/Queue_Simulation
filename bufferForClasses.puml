@@ -1,0 +1,86 @@
+@startuml
+'https://plantuml.com/class-diagram
+'title "WriteInFile Class"
+'class WriteInFile {
+'    +WriteInFile(String fileName, String writeLog);
+'}
+'title "Scheduler Class"
+'class Scheduler {
+'     -servers:List<Server>
+'     -strategy:Strategy
+'     -threads:List<Thread>
+'     +changeStrategy(SelectionPolicy policy):void
+'     +dispatchTask(Task t):void
+'     +interruptThreads():void
+'     +getServers():List<Server>
+'     +isServerOccupied(int i):boolean
+'}
+'title "Server Class"
+'class Server {
+'    -tasks: BlockingQueue<>
+'    -waitingPeriod: AtomicInteger
+'    -waitingTimeServer: AtomicInteger
+'    -serviceTimeServer: AtomicInteger
+'    -noOfTasksResolved: AtomicInteger
+'    +addTask(Task newTask): void
+'}
+'title "SimulationManager Class"
+'class SimulationManager {
+'    -timeLimit:int //timpul de simulare
+'    <caracteristicile de simulare>
+'    -minProcessingTime:int
+'    -maxProcessingTime:int
+'    -minArrivalTime:int
+'    -maxArrivalTime:int
+'    -numberOfClients:int
+'    -selectionPolicy: SelectionPolicy
+'    </caracteristicile de simulare>
+'    -scheduler: Scheduler //planificatorul
+'    -generatedTasks: List<Task> //taskurile generate random
+'    -peakHourTime, preakHourTaks:int //calculul peak hour, care tine de clasa de simulare
+'    -averageWaitingTime, averageServiceTime: float //rezultatele simularii
+'    -writeToFile: String //log ul care trebuie afisat la urma executiei in fisier
+'    -currentTime: AtomicInteger//timpul curent al simularii
+'    -generateRandomTasks(): void
+'    -update:void
+'    -showSimulationResult():void
+'    -showLogAndIsProcessing(): boolean
+'}
+'title "Task Class"
+'class Task {
+'    -id: int
+'    -arrivalTime: int
+'    -proceessingTime: int
+'    -finishTime: int
+'    +toString(): String
+'}
+'title "SelectionPolicy Enum"
+'enum SelectionPolicy {
+'    SHORTEST_QUEUE,
+'    SHORTEST_TIME
+'}
+'title "Strategy Interface"
+'interface Strategy {
+'    +addTask(List<Server>, Task): void
+'}
+'title "ConcreteStrategyQueue, ConcreteStrategyTime Classes"
+'class ConcreteStrategyQueue {
+'    +addTask(List<Server>, Task): void
+'}
+'
+'class ConcreteStrategyTime {
+'    +addTask(List<Server>, Task): void
+'}
+'title "SimulationFrame"
+'class SimulationFrame {
+'//JTextField and JLabel pentru caracteristicile de simulare
+'-listenerSimulation(): void
+'-init(): void
+'}
+title "SimulationDrawFrame"
+class SimulationDrawFrame {
+- WIDTH, HEIGHT: int
+- simulationManager: SimulationManager
++paint(Graphics g): void
+}
+@enduml

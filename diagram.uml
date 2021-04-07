@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="646.0835216572506" y="110.0">simulationmodel.Server</node>
+    <node x="188.99999999999994" y="290.0">strategy.ConcreteStrategyQueue</node>
+    <node x="425.99999999999994" y="290.0">strategy.ConcreteStrategyTime</node>
+    <node x="631.6252354048964" y="0.0">simulationmodel.Task</node>
+    <node x="0.0" y="290.0">strategy.enums.SelectionPolicy</node>
+    <node x="359.49999999999994" y="210.0">strategy.Strategy</node>
+    <node x="656.1010357815442" y="390.0">file.WriteInFile</node>
+    <node x="699.75" y="570.0">view.SimulationDrawFrame</node>
+    <node x="525.25" y="490.0">simulationmodel.SimulationManager</node>
+    <node x="492.74999999999994" y="650.0">view.SimulationFrame</node>
+    <node x="516.1010357815442" y="390.0">simulationmodel.Scheduler</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="simulationmodel.Scheduler" target="strategy.enums.SelectionPolicy">
+      <point x="-52.5" y="-15.0" />
+      <point x="523.6010357815442" y="370.0" />
+      <point x="147.0" y="370.0" />
+      <point x="63.0" y="15.0" />
+    </edge>
+    <edge source="strategy.ConcreteStrategyTime" target="simulationmodel.Task">
+      <point x="0.0" y="-15.0" />
+      <point x="530.0" y="265.0" />
+      <point x="552.0177024482108" y="265.0" />
+      <point x="552.0177024482108" y="90.0" />
+      <point x="659.6252354048964" y="90.0" />
+      <point x="-12.0" y="15.0" />
+    </edge>
+    <edge source="strategy.Strategy" target="simulationmodel.Task">
+      <point x="-28.0" y="-15.0" />
+      <point x="387.49999999999994" y="80.0" />
+      <point x="651.6252354048964" y="80.0" />
+      <point x="-20.0" y="15.0" />
+    </edge>
+    <edge source="simulationmodel.SimulationManager" target="simulationmodel.Task">
+      <point x="-40.888888888888886" y="-15.0" />
+      <point x="576.3611111111111" y="450.0" />
+      <point x="178.49999999999994" y="450.0" />
+      <point x="178.49999999999994" y="60.0" />
+      <point x="635.6252354048964" y="60.0" />
+      <point x="-36.0" y="15.0" />
+    </edge>
+    <edge source="simulationmodel.Scheduler" target="simulationmodel.Task">
+      <point x="52.5" y="-15.0" />
+      <point x="628.6010357815442" y="370.0" />
+      <point x="838.5" y="370.0" />
+      <point x="838.5" y="80.0" />
+      <point x="683.6252354048964" y="80.0" />
+      <point x="12.0" y="15.0" />
+    </edge>
+    <edge source="strategy.Strategy" target="simulationmodel.Server">
+      <point x="28.0" y="-15.0" />
+      <point x="443.49999999999994" y="170.0" />
+      <point x="664.0835216572506" y="170.0" />
+      <point x="-30.0" y="15.0" />
+    </edge>
+    <edge source="simulationmodel.Scheduler" target="strategy.ConcreteStrategyTime">
+      <point x="-7.5" y="-15.0" />
+      <point x="568.6010357815442" y="340.0" />
+      <point x="530.0" y="340.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="view.SimulationFrame" target="view.SimulationDrawFrame">
+      <point x="33.60000000000002" y="-15.0" />
+      <point x="610.3499999999999" y="620.0" />
+      <point x="749.75" y="620.0" />
+      <point x="-50.0" y="15.0" />
+    </edge>
+    <edge source="strategy.ConcreteStrategyQueue" target="strategy.Strategy">
+      <point x="72.0" y="-15.0" />
+      <point x="368.99999999999994" y="265.0" />
+      <point x="378.16666666666663" y="265.0" />
+      <point x="-37.333333333333314" y="15.0" />
+    </edge>
+    <edge source="view.SimulationDrawFrame" target="simulationmodel.Server">
+      <point x="25.0" y="-15.0" />
+      <point x="824.75" y="160.0" />
+      <point x="736.0835216572506" y="160.0" />
+      <point x="42.0" y="15.0" />
+    </edge>
+    <edge source="simulationmodel.Scheduler" target="simulationmodel.Server">
+      <point x="37.5" y="-15.0" />
+      <point x="613.6010357815442" y="360.0" />
+      <point x="741.0835216572506" y="360.0" />
+      <point x="741.0835216572506" y="180.0" />
+      <point x="712.0835216572506" y="180.0" />
+      <point x="18.0" y="15.0" />
+    </edge>
+    <edge source="view.SimulationDrawFrame" target="simulationmodel.SimulationManager">
+      <point x="-75.0" y="-15.0" />
+      <point x="724.75" y="550.0" />
+      <point x="640.25" y="550.0" />
+      <point x="23.0" y="15.0" />
+    </edge>
+    <edge source="view.SimulationFrame" target="simulationmodel.SimulationManager">
+      <point x="-33.599999999999966" y="-15.0" />
+      <point x="543.15" y="630.0" />
+      <point x="565.75" y="630.0" />
+      <point x="565.75" y="550.0" />
+      <point x="548.25" y="550.0" />
+      <point x="-69.0" y="15.0" />
+    </edge>
+    <edge source="simulationmodel.Scheduler" target="strategy.ConcreteStrategyQueue">
+      <point x="-37.5" y="-15.0" />
+      <point x="538.6010357815442" y="360.0" />
+      <point x="296.99999999999994" y="360.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="strategy.ConcreteStrategyTime" target="simulationmodel.Server">
+      <point x="69.33333333333331" y="-15.0" />
+      <point x="599.3333333333333" y="265.0" />
+      <point x="602.0" y="265.0" />
+      <point x="602.0" y="180.0" />
+      <point x="676.0835216572506" y="180.0" />
+      <point x="-18.0" y="15.0" />
+    </edge>
+    <edge source="strategy.ConcreteStrategyQueue" target="simulationmodel.Task">
+      <point x="-72.0" y="-15.0" />
+      <point x="224.99999999999994" y="265.0" />
+      <point x="236.24999999999994" y="265.0" />
+      <point x="236.24999999999994" y="70.0" />
+      <point x="643.6252354048964" y="70.0" />
+      <point x="-28.0" y="15.0" />
+    </edge>
+    <edge source="strategy.ConcreteStrategyTime" target="strategy.Strategy">
+      <point x="-69.33333333333331" y="-15.0" />
+      <point x="460.66666666666663" y="265.0" />
+      <point x="452.8333333333333" y="265.0" />
+      <point x="37.33333333333337" y="15.0" />
+    </edge>
+    <edge source="view.SimulationDrawFrame" target="simulationmodel.Task">
+      <point x="75.0" y="-15.0" />
+      <point x="874.75" y="550.0" />
+      <point x="865.5" y="550.0" />
+      <point x="865.5" y="50.0" />
+      <point x="707.6252354048964" y="50.0" />
+      <point x="36.0" y="15.0" />
+    </edge>
+    <edge source="simulationmodel.Server" target="simulationmodel.Task">
+      <point x="-24.0" y="-15.0" />
+      <point x="670.0835216572506" y="90.0" />
+      <point x="667.6252354048964" y="90.0" />
+      <point x="-4.0" y="15.0" />
+    </edge>
+    <edge source="view.SimulationFrame" target="strategy.enums.SelectionPolicy">
+      <point x="-67.19999999999999" y="-15.0" />
+      <point x="509.54999999999995" y="630.0" />
+      <point x="52.0" y="630.0" />
+      <point x="52.0" y="370.0" />
+      <point x="21.0" y="370.0" />
+      <point x="-63.0" y="15.0" />
+    </edge>
+    <edge source="simulationmodel.SimulationManager" target="simulationmodel.Server">
+      <point x="40.888888888888914" y="-15.0" />
+      <point x="658.1388888888889" y="450.0" />
+      <point x="802.6010357815442" y="450.0" />
+      <point x="802.6010357815442" y="170.0" />
+      <point x="724.0835216572506" y="170.0" />
+      <point x="30.0" y="15.0" />
+    </edge>
+    <edge source="simulationmodel.SimulationManager" target="file.WriteInFile">
+      <point x="20.444444444444457" y="-15.0" />
+      <point x="637.6944444444443" y="440.0" />
+      <point x="724.1010357815442" y="440.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="simulationmodel.SimulationManager" target="strategy.enums.SelectionPolicy">
+      <point x="-61.333333333333314" y="-15.0" />
+      <point x="555.9166666666666" y="460.0" />
+      <point x="74.0" y="460.0" />
+      <point x="74.0" y="370.0" />
+      <point x="105.0" y="370.0" />
+      <point x="21.0" y="15.0" />
+    </edge>
+    <edge source="simulationmodel.SimulationManager" target="simulationmodel.Scheduler">
+      <point x="-20.444444444444457" y="-15.0" />
+      <point x="596.8055555555554" y="440.0" />
+      <point x="546.1010357815442" y="440.0" />
+      <point x="-30.0" y="15.0" />
+    </edge>
+    <edge source="strategy.ConcreteStrategyQueue" target="simulationmodel.Server">
+      <point x="0.0" y="-15.0" />
+      <point x="296.99999999999994" y="265.0" />
+      <point x="295.2741996233523" y="265.0" />
+      <point x="295.2741996233523" y="160.0" />
+      <point x="652.0835216572506" y="160.0" />
+      <point x="-42.0" y="15.0" />
+    </edge>
+    <edge source="simulationmodel.Scheduler" target="strategy.Strategy">
+      <point x="-22.5" y="-15.0" />
+      <point x="553.6010357815442" y="350.0" />
+      <point x="415.49999999999994" y="350.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="784.7261904761901" y="422.91666666666674" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

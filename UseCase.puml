@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+title Use-case Queue Simulator
+actor User
+(Introducerea caracteristicilor de simulare) as (carac)
+
+User --> (carac)
+User -> (Start Simulation)
+(Start Simulation) ..> (Real Time Simulation): <<include>>
+(Start Simulation) ..> (Result of Simulation): <<include>>
+(carac) ..> (Simulation Time):<<include>>
+(carac) ..> ([Min Arrival Time, Max Arrival Time]):<<include>>
+(carac) ..> ([Min Processing Time, Max Processing Time]):<<include>>
+(carac) ..> (Number of tasks):<<include>>
+(carac) ..> (Number of servers):<<include>>
+(carac) ..> (Strategy)
+(Strategy) ..> (Shortest Queue Strategy):<<include>>
+(Strategy) ..> (Shortest Time Strategy):<<include>>
+@enduml

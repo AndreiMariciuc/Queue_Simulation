@@ -1,0 +1,48 @@
+
+@startuml
+
+package strategy {
+  interface Strategy {
+  }
+
+  class ConcreteStrategyQueue {
+  }
+
+  class ConcreteStrategyTime {
+  }
+  package enums {
+    enum SelectionPolicy {
+    SHORTEST_QUEUE
+    SHORTEST_TIME
+    }
+  }
+}
+
+package file {
+  class WriteInFile {
+  }
+}
+
+package simulationmodel {
+  class Scheduler {
+  }
+
+  class Task {
+  }
+
+  class Server {
+  }
+}
+
+package viewcontroller {
+  class SimulationFrame {
+  }
+
+  class SimulationDrawFrame {
+  }
+}
+
+simulationmodel -> file : creaza
+simulationmodel --> strategy: implementeaza
+viewcontroller  ---> simulationmodel: interogheaza&afiseaza
+@enduml
